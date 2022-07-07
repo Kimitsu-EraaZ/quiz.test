@@ -1,0 +1,63 @@
+* {     /*  *(étoile) tous les élément de la page*/
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* font dans le all (*) car les bouton ne sont pas pris en compte si l'on passe juste par le body*/
+  list-style: none;
+}
+body {
+  text-align: center;
+  margin: 0;   /* exemple -> m0 donne : margin: 0; m10 donne -> margin: 10px; */
+  color: white;
+  min-height: 100vh;  /*vh = taille de l'écran de l'utilisateur, donc 100vh = 100% de l'écran et 200vh = 200% de l'écran*/
+}
+.box1, .box2, .box3, .box4, .box5, .box6 {
+  border: 6px solid white;
+  border-radius: 20px;
+  transition: 0.25 ease;
+  background: black;
+  width: 70%;
+  margin: auto;
+  padding: 10px;
+  overflow-x: hidden;
+  animation-duration: 2s;
+  animation-name: slidein;
+}
+@keyframes slidein {
+  from {
+    width: 30%;
+    opacity: -1;
+  }
+  to {
+    width: 70%;
+    opacity: 1;
+  }
+  }
+.q1, .q2, .q3, .q4, .q5, .q6 {
+  visibility: hidden; /* l'objet disparait visuellement, contrairement au display: none qui retire l'objet */
+  color: white;
+  width: 240px;
+  margin: 10px auto 0;
+  background-color: black;
+  border-radius: 30px;
+  padding: 0.5% 2%;  
+  border: 1px solid white;
+  text-decoration:none;
+  /* opacity: 0;
+  transition: 0.6s;  
+  transform: translateX(-200px); */
+}
+.q1:hover, .q2:hover, .q3:hover, .q4:hover, .q5:hover, .q6:hover {
+  background-color: rgba(0, 0, 0, 0.373)
+}
+.btn-g {
+  margin: 1%;
+  border-radius: 5px;
+}
+.btn-g:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border: 1px solid white;
+}
+.survolebtn {
+  background: red;
+}
+
